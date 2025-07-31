@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import ChatMessage from '../chat/ChatMessage';
 
-const ChatScreen = ({ topic, messages }) => {
+const ChatScreen = ({ topic, messages = [], isTyping = false, typingPlayer = '' }) => {
   const chatEndRef = useRef(null);
   
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [messages, isTyping]);
 
   return (
     <>
@@ -16,8 +16,21 @@ const ChatScreen = ({ topic, messages }) => {
       </div>
       <div className="px-6 pb-6 space-y-4">
         {messages.map((msg, index) => (
-          <ChatMessage key={index} player={msg.player} message={msg.message} isHuman={msg.isHuman} />
+          <ChatMessage 
+            key={index} 
+            player={msg.player} 
+            message={msg.message} 
+            isHuman={msg.isHuman} 
+          />
         ))}
+        {isTyping && (
+          <ChatMessage 
+            player={typingPlayer} 
+            message="" 
+            isHuman={false} 
+            isTyping={true} 
+          />
+        )}
         <div ref={chatEndRef} />
       </div>
     </>

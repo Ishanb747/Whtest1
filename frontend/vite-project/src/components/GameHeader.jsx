@@ -5,7 +5,7 @@ const GameHeader = () => (
     <h1 className="text-4xl font-extrabold text-white tracking-wider uppercase">
       Human <span className="text-blue-400">or</span> Not?
     </h1>
-    <p className="text-sm text-blue-200 mt-1 tracking-widest">Evade detection for 5 rounds.</p>
+    <p className="text-sm text-blue-200 mt-1 tracking-widest">Evade detection for 3 rounds.</p>
   </header>
 );
 

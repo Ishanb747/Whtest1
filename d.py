@@ -30,7 +30,7 @@ Your name: {player_name}
 
 IMPORTANT: You are NOT allowed to vote for yourself. Do not select yourself as the likely human under any circumstances.
 
-There are five players in the discussion. Four of them are LLMs, and one is a human. Based on the conversation, your task is to identify who the human is by analyzing tone, emotion, inconsistency, informality, or personal expression.
+There are five players in the discussion. Four of them are LLMs, and one is a human. Based on the conversation, your task is to identify who the human is through inconsistency. But do not judge based on the informality, as different bots have their unique personalities!. Just try to catch the human 
 
 Only one player is human.
 """
